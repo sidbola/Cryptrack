@@ -1,0 +1,232 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorNormalBackground"
+    tools:context=".features.coindetails.holdings.HoldingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:id="@+id/holdingsInfoContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/transparent"
+            android:id="@+id/mainHoldingsInfo">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="?attr/colorNormalText"
+                android:id="@+id/holdingsValue"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:textSize="40sp"
+                android:fontFamily="@font/roboto_light"
+                android:textStyle="normal"
+                android:text="@string/_00_00"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/amountOfTokens"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="?attr/colorNormalText"
+                android:textSize="15sp"
+                android:text="@string/_000_00_tokens"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent"
+            android:id="@+id/additionalHoldingsInfo"
+            android:baselineAligned="false"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorNormalText"
+                    android:textSize="20dp"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/netCost"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/_0_00"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4c4c4c"
+                    android:background="@android:color/transparent"
+                    android:textSize="12dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/net_cost"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorNormalText"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/numberOfTransactions"
+                    android:background="@android:color/transparent"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/_0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4c4c4c"
+                    android:background="@android:color/transparent"
+                    android:textSize="12dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/transactions"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textColor="?attr/colorNormalText"
+                    android:textSize="20dp"
+                    android:id="@+id/overallReturn"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/_0_00"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4c4c4c"
+                    android:background="@android:color/transparent"
+                    android:textSize="12dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/total_return"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorNormalText"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/percentOverallReturn"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/_0_00per"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#4c4c4c"
+                    android:background="@android:color/transparent"
+                    android:textSize="12dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/percent_return"/>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/addTransactionButton"
+        android:src="@drawable/ic_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"/>
+
+
+    <!-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/additionalHoldingsInfo"
+        android:background="#4c4c4c"/>
+
+        <!-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_thin"
+        android:id="@+id/transactionsLabel"
+        android:textColor="?attr/colorNormalText"
+        android:background="@android:color/transparent"
+        android:layout_margin="10dp"
+        android:textSize="30sp"
+        android:layout_below="@id/holdingsInfoContainer"
+        android:text="@string/transactions"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/transactionsRecyclerView"
+        android:layout_below="@+id/transactionsLabel"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:paddingTop="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:elevation="10dp"
+            android:clipToPadding="false"
+            android:background="@android:color/transparent"
+            android:id="@+id/transactionEntryFragmentHolder" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

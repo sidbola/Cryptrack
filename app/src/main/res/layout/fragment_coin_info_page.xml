@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coinInfoPage"
+    android:background="?attr/colorNormalBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.coindetails.CoinInfoPageFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        android:id="@+id/coinInfoHeader"
+        android:weightSum="9">
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/coinInfoBackButton"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_navigate_back"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/watchlistButton"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_watchlist_unselected"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fullInfoTicker"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:textColor="?attr/colorNormalText"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/raleway_medium"
+            android:text="@string/abc"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textColor="#4c4c4c"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:layout_below="@id/fullInfoTicker"
+            android:fontFamily="@font/raleway_light"
+            android:layout_marginBottom="10dp"
+            android:textSize="12sp"
+            android:id="@+id/fullInfoName"/>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/coinInfoToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/coinInfoTabs"
+            app:tabTextColor="?attr/colorNormalText"
+            app:tabSelectedTextColor="?attr/colorNormalText"
+            app:tabIndicatorColor="?attr/colorNormalText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.design.widget.TabLayout>
+
+    </RelativeLayout>
+
+    <com.sidbola.cryptrack.features.shared.view.SwipeCancelViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:id="@+id/coinInfoViewPager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </com.sidbola.cryptrack.features.shared.view.SwipeCancelViewPager>
+
+</RelativeLayout>

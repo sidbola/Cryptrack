@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorNormalBackground"
+    android:id="@+id/welcomeScreenFrame"
+    tools:context=".features.authentication.initialsetup.WelcomeScreenFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:id="@+id/logo"
+                android:background="@drawable/ic_monetization"
+                android:scaleType="centerInside"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/welcomeLabel"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:textColor="#455A64"
+                android:textSize="15sp"
+                android:text="@string/welcome_label"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:textColor="#455A64"
+                android:id="@+id/tapContinueLabel"
+                android:text="@string/get_started"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+
+    </RelativeLayout>
+
+</FrameLayout>

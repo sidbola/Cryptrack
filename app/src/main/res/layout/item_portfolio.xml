@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="?attr/colorNormalBackground">
+
+    <com.sidbola.cryptrack.features.shared.view.CoinGraphSnapshot
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:alpha="0.2"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/portfolioGraph" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="@string/btc"
+                android:id="@+id/portfolioItemTicker"
+                android:background="@android:color/transparent"
+                android:textColor="?attr/colorNormalText"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto_light"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/portfolioItemTicker"
+                android:id="@+id/portfolioItemCoinName"
+                android:background="@android:color/transparent"
+                android:textColor="#4c4c4c"
+                android:fontFamily="@font/roboto_light"
+                android:textSize="12sp"
+                android:text="@string/bitcoin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/portfolioItemAmountHeld"
+                android:layout_below="@+id/portfolioItemTotalHoldings"
+                android:text="@string/_0_4382_btc"
+                android:background="@android:color/transparent"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="#4c4c4c"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/portfolioItemTotalHoldings"
+                android:textSize="20sp"
+                android:background="@android:color/transparent"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="?attr/colorNormalText"
+                android:text="@string/_2839_28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="viewEnd"
+                android:background="@android:color/transparent"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true"
+                android:textColor="?attr/colorNormalText"
+                android:textSize="13sp"
+                android:fontFamily="@font/roboto_light"
+                android:id="@+id/portfolioItemCoinPrice"
+                android:text="@string/_6732_63" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/portfolioItemCoinPrice"
+                android:layout_alignParentEnd="true"
+                android:textColor="#4c4c4c"
+                android:background="@android:color/transparent"
+                android:id="@+id/portfolioItemCoinPercentChange"
+                android:fontFamily="@font/roboto_light"
+                android:layout_marginEnd="20dp"
+                android:textSize="12sp"
+                android:text="@string/_32_94_128_23"/>
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="#4c4c4c"/>
+
+
+
+</RelativeLayout>

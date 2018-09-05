@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorNormalBackground"
+    tools:context=".features.mainscreen.watchlist.WatchlistFragment">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/watchlistPageTitle"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="10dp"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textColor="?attr/colorNormalText"
+                android:fontFamily="@font/raleway_extra_light"
+                android:text="@string/watchlist"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:background="@android:color/transparent"
+                android:id="@+id/watchlistRecyclerView" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

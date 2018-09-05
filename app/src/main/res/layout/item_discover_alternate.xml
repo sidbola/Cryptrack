@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="75dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="65dp"
+        app:cardElevation="5dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorNormalBackground"
+            android:scaleType="matrix"
+            android:alpha=".9"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="?attr/colorNormalText"
+                android:id="@+id/discoverMc"
+                android:fontFamily="@font/roboto_light"
+                android:textStyle="bold"
+                android:alpha=".5"
+                android:layout_centerInParent="true" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:weightSum="7"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:background="@android:color/transparent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:padding="5dp"
+                    android:background="@android:color/transparent"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:orientation="vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:textColor="?attr/colorNormalText"
+                        android:id="@+id/discoverPercentChange"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_black"
+                        android:textAlignment="center"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:layout_weight="2">
+
+                        <com.sidbola.cryptrack.features.shared.view.CoinGraphSnapshot
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/discoverGraph" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/discoverName"
+                    android:background="@android:color/transparent"
+                    android:textColor="?attr/colorNormalText"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="@string/coin_name"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dollarSign"
+                        android:textColor="?attr/colorNormalText"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_light"
+                        android:alpha=".5"
+                        android:text="@string/dolar"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/discoverValue"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/roboto_light"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@id/dollarSign"
+                        android:textColor="?attr/colorNormalText"
+                        android:text="@string/_1423_34502"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="?attr/colorNormalText"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                android:id="@+id/discoverTicker"
+                android:fontFamily="@font/raleway_light"
+                android:alpha=".03"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="-19dp"
+                android:layout_marginStart="-8dp"
+                android:text="@string/cnn"/>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

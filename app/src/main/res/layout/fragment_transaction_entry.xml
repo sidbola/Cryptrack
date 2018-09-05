@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_corners"
+    android:layout_gravity="center"
+    android:padding="10dp"
+    android:elevation="10dp"
+    android:clipToPadding="false"
+    android:clipChildren="false"
+    android:layout_height="match_parent"
+    tools:context=".features.coindetails.holdings.TransactionEntryFragment">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/colorNormalText"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center"
+        android:text="@string/btc"
+        android:id="@+id/transactionTickerLabel"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:textColor="?attr/colorSpecialPopupText"
+        android:textSize="15sp"
+        android:id="@+id/transactionQuantity"
+        android:hint="@string/enter_quantity"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:background="@android:color/transparent"
+        android:textColor="#f14d3e"
+        android:layout_gravity="center"
+        android:text="@string/required"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textSize="15sp"
+        android:textColor="?attr/colorSpecialPopupText"
+        android:inputType="numberDecimal"
+        android:layout_gravity="center"
+        android:id="@+id/transactionPrice"
+        android:hint="@string/custom_buy_sell_price"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:background="@android:color/transparent"
+        android:textColor="#4c4c4c"
+        android:layout_gravity="center"
+        android:text="@string/optional"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:inputType="datetime"
+        android:textColor="?attr/colorSpecialPopupText"
+        android:textSize="15sp"
+        android:layout_gravity="center"
+        android:id="@+id/transactionDate"
+        android:hint="@string/enter_date"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:background="@android:color/transparent"
+        android:textColor="#4c4c4c"
+        android:layout_gravity="center"
+        android:text="@string/optional"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:weightSum="2"
+        android:id="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="#4c4c4c"
+                android:id="@+id/transactionBuyButton"
+                android:textColor="#fff"
+                android:text="@string/buy"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_weight="1">
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/transactionSellButton"
+                android:background="#4c4c4c"
+                android:textColor="#fff"
+                android:text="@string/sell" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="75dp"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="65dp"
+        app:cardElevation="5dp">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorNormalBackground"
+            android:scaleType="matrix"
+            android:alpha=".9"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:background="@android:color/transparent"
+                android:weightSum="5"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="2">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:weightSum="5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@android:color/transparent"
+                        android:layout_height="0dp"
+
+                        android:layout_weight="1"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <!-->
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/coinLogo"
+                    android:src="@drawable/ic_no_image"
+                    android:alpha=".25" />
+                <!-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/coinName"
+                    android:background="@android:color/transparent"
+                    android:textColor="?attr/colorNormalText"
+                    android:textSize="15sp"
+                    android:text="@string/coin_name"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/dollarSign"
+                        android:textColor="?attr/colorNormalText"
+                        android:alpha=".5"
+                        android:text="@string/dollar"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/coinValue"
+                        android:layout_toEndOf="@id/dollarSign"
+                        android:textColor="?attr/colorNormalText"
+                        android:text="@string/_1423_34502"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                android:id="@+id/ticker"
+                android:alpha=".025"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="-32dp"
+                android:layout_marginEnd="-8dp"
+                android:text="CNN"/>
+            <!-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="?attr/colorNormalText"
+                android:textSize="90sp"
+                android:textStyle="bold"
+                android:id="@+id/ticker"
+                android:alpha=".025"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="-32dp"
+                android:layout_marginStart="-8dp"
+                android:text="@string/cnn"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorNormalText"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/value24hChange"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:textSize="15sp"
+                    android:text="@string/_0_00per"/>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/colorNormalBackground"
+    tools:context=".features.mainscreen.portfolio.PortfolioFragment">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:id="@+id/settingsButton"
+            android:src="@drawable/ic_settings"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/portfolioPageTitle"
+            android:textAlignment="center"
+            android:background="@android:color/transparent"
+            android:textColor="?attr/colorNormalText"
+            android:textSize="30sp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:maxLines="1"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/portfolio"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:background="@android:color/transparent"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/portfolioPageTitle"
+            android:textColor="#4c4c4c"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="12sp"
+            android:text="@string/total_portfolio_worth"/>
+
+
+    </RelativeLayout>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/portfolioRecyclerView"/>
+
+
+
+</LinearLayout>

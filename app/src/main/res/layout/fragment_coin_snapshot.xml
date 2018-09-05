@@ -1,0 +1,372 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".features.coindetails.SnapshotFragment">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/constraintLayout"
+        android:orientation="vertical"
+        android:background="?attr/colorNormalBackground">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/colorNormalBackground"
+            android:id="@+id/graphHolder"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="?attr/colorNormalText"
+                    android:id="@+id/fullInfoPrice"
+                    android:layout_gravity="center"
+                    android:textSize="40sp"
+                    android:fontFamily="@font/roboto_light"
+                    android:textStyle="normal"
+                    android:text="@string/_000_00"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fullInfoChange"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/roboto_thin"
+                    android:textColor="?attr/colorNormalText"
+                    android:textSize="15sp"
+                    android:text="@string/_00_00_0_00"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4">
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorNormalBackground"
+                    android:id="@+id/graphLoading"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>
+
+                <com.sidbola.cryptrack.features.shared.view.CoinGraphDetail
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/fullCoinSnapshot"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-->
+            Layout for graph time intervals
+        <!-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent"
+            android:id="@+id/graphIncrementsHolder"
+            app:layout_constraintTop_toBottomOf="@+id/graphHolder"
+            android:orientation="horizontal"
+            android:weightSum="8">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:id="@+id/button1h"
+                android:gravity="center"
+                android:clickable="true"
+                android:fontFamily="@font/roboto_light"
+                android:focusable="true"
+                android:textColor="#4c4c4c"
+                android:text="@string/_1h"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:id="@+id/button24h"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="?attr/colorNormalText"
+                android:text="@string/_24h"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/button5d"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/roboto_light"
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor="#4c4c4c"
+                android:text="@string/_5d"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:id="@+id/button1m"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="#4c4c4c"
+                android:text="@string/_1m"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:id="@+id/button3m"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="#4c4c4c"
+                android:text="@string/_3m"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:id="@+id/button6m"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="#4c4c4c"
+                android:text="@string/_6m"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:id="@+id/button1y"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="#4c4c4c"
+                android:text="@string/_1y"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/buttonAll"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="#4c4c4c"
+                android:text="@string/all"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toBottomOf="@id/graphIncrementsHolder"
+            android:id="@+id/coinSnapshotInfoHolder">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/transparent"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/snapshotMarketcap"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/roboto_light"
+                            android:textColor="?attr/colorNormalText"
+                            android:text="@string/_000_000"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:textSize="12sp"
+                            android:background="@android:color/transparent"
+                            android:layout_below="@+id/snapshotMarketcap"
+                            android:textColor="#4c4c4c"
+                            android:text="@string/market_cap"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/snapshotOpen"
+                            android:textSize="18sp"
+                            android:background="@android:color/transparent"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/roboto_light"
+                            android:textColor="?attr/colorNormalText"
+                            android:text="@string/_000_000"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:background="@android:color/transparent"
+                            android:textColor="#4c4c4c"
+                            android:layout_below="@+id/snapshotOpen"
+                            android:text="@string/open"/>
+
+                    </RelativeLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:baselineAligned="false"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:id="@+id/snapshotHigh"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_light"
+                            android:textColor="?attr/colorNormalText"
+                            android:text="@string/_000_000"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:textSize="12sp"
+                            android:textAlignment="center"
+                            android:layout_below="@+id/snapshotHigh"
+                            android:textColor="#4c4c4c"
+                            android:text="@string/high"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/snapshotLow"
+                            android:background="@android:color/transparent"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:fontFamily="@font/roboto_light"
+                            android:textColor="?attr/colorNormalText"
+                            android:text="@string/_000_000"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:background="@android:color/transparent"
+                            android:textAlignment="center"
+                            android:layout_below="@+id/snapshotLow"
+                            android:textColor="#4c4c4c"
+                            android:text="@string/low"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</LinearLayout>

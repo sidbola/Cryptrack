@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="?attr/colorNormalBackground"
+    tools:context=".features.coindetails.news.NewsFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:id="@+id/newsRecyclerView"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:id="@+id/noNewsLabel"
+        android:textSize="15sp"
+        android:layout_centerInParent="true"
+        android:textColor="?attr/colorNormalText"
+        android:visibility="gone"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/no_news_found_on_this_coin"/>
+
+</RelativeLayout>

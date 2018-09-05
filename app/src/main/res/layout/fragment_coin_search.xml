@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="?attr/colorNormalBackground"
+    tools:context=".features.mainscreen.discover.CoinSearchFragment">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/fetchingCoinsIndicator"
+            android:textColor="?attr/colorNormalText"
+            android:textAlignment="center"
+            android:text="Loading Coins..."/>
+
+    <ProgressBar
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="10dp"
+        android:id="@+id/fetchingProgress"
+        android:layout_toStartOf="@id/fetchingCoinsIndicator"
+        />
+
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="?attr/colorNormalText"
+        android:padding="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/fetchingCoinsIndicator"
+        android:background="@drawable/coinsearchtextbox"
+        android:drawableEnd="@drawable/ic_search_unselected"
+        android:singleLine="true"
+        android:hint="@string/search_for_a_coin"
+        android:textColorHint="#606163"
+        android:id="@+id/coinSearch"/>
+
+
+
+</RelativeLayout>

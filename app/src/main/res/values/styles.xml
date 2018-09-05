@@ -1,0 +1,39 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="watchlist_icon">@drawable/ic_watchlist</item>
+        <item name="discover_icon">@drawable/ic_discover</item>
+        <item name="portfolio_icon">@drawable/ic_portfolio</item>
+
+        <item name="colorNormalBackground">@color/colorPrimaryDark</item>
+        <item name="colorAccentedBackground">@color/white</item>
+
+        <item name="colorNormalText">@color/white</item>
+        <item name="colorAccentText">@color/black</item>
+
+        <item name="colorSpecialPopupText">@color/black</item>
+
+        <item name="android:colorPrimary">@color/colorPrimaryDark</item>
+        <item name="android:colorAccent">@color/colorAccentDark</item>
+    </style>
+
+    <style name="LightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="watchlist_icon">@drawable/ic_watchlist_lighttheme</item>
+        <item name="discover_icon">@drawable/ic_discover_lighttheme</item>
+        <item name="portfolio_icon">@drawable/ic_portfolio_lighttheme</item>
+
+        <item name="colorNormalBackground">@color/colorPrimaryLight</item>
+        <item name="colorAccentedBackground">@color/colorPrimaryDark</item>
+
+        <item name="colorNormalText">@color/black</item>
+        <item name="colorAccentText">@color/white</item>
+
+        <item name="colorSpecialPopupText">@color/black</item>
+
+        <item name="android:colorPrimary">@color/colorPrimaryLight</item>
+        <item name="android:colorAccent">@color/colorAccentLight</item>
+    </style>
+
+
+
+</resources>

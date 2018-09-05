@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Other values-->
+    <attr name="colorPositive" format="reference" />
+    <attr name="colorNegative" format="reference" />
+    <attr name="colorPositiveSelect" format="reference" />
+    <attr name="colorNegativeSelect" format="reference" />
+    <attr name="watchlist_icon" format="reference"/>
+    <attr name="portfolio_icon" format="reference"/>
+    <attr name="discover_icon" format="reference"/>
+
+    <attr name="colorAccentedBackground" format="reference"/>
+    <attr name="colorNormalBackground" format="reference"/>
+
+    <attr name="colorNormalText" format="reference"/>
+    <attr name="colorAccentText" format="reference"/>
+
+    <attr name="colorSpecialPopupText" format="reference"/>
+
+
+
+</resources>

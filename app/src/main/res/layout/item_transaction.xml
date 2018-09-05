@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="?attr/colorNormalBackground"
+    android:weightSum="7">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/removeItem"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_delete"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="@string/buy_150_btc"
+            android:id="@+id/transItemAmount"
+            android:textAlignment="center"
+            android:textColor="?attr/colorNormalText"
+            android:background="@android:color/transparent"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto_light"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_below="@+id/transItemAmount"
+            android:background="@android:color/transparent"
+            android:id="@+id/transDate"
+            android:textAlignment="center"
+            android:textColor="#4c4c4c"
+            android:fontFamily="@font/roboto_light"
+            android:textSize="12sp"
+            android:text="@string/june_08_2018"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6.5"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/transPriceDuringPurchase"
+            android:background="@android:color/transparent"
+            android:layout_below="@+id/transAmountInvested"
+            android:text="@string/at_0_234_per_btc"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/roboto_light"
+            android:textColor="#4c4c4c"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/transAmountInvested"
+            android:layout_marginStart="20dp"
+            android:textSize="13sp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_light"
+            android:textColor="?attr/colorNormalText"
+            android:text="@string/invested_37_234" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewEnd"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:layout_alignParentEnd="true"
+            android:textColor="?attr/colorNormalText"
+            android:textSize="13sp"
+            android:fontFamily="@font/roboto_light"
+            android:id="@+id/transItemCurrentWorth"
+            android:text="@string/currently_worth_89_63" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/transItemCurrentWorth"
+            android:layout_alignParentEnd="true"
+            android:textColor="#4c4c4c"
+            android:id="@+id/transProfitLoss"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/roboto_light"
+            android:layout_marginEnd="20dp"
+            android:textSize="12sp"
+            android:text="@string/_32_94_128_23"/>
+
+    </RelativeLayout>
+
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:background="#4c4c4c"/>
+
+</LinearLayout>

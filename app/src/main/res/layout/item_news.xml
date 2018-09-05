@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="?attr/colorNormalBackground"
+    android:padding="10dp"
+    android:weightSum="9"
+    android:orientation="vertical"
+    android:layout_height="140dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textSize="15sp"
+        android:background="@android:color/transparent"
+        android:maxLines="1"
+        android:layout_weight="2"
+        android:id="@+id/articleName"
+        android:textColor="?attr/colorNormalText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:textSize="12sp"
+        android:layout_weight="5"
+        android:maxLines="4"
+        android:alpha=".5"
+        android:id="@+id/articleDescription"
+        android:textColor="?attr/colorNormalText" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:layout_weight="2"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:textAlignment="textStart"
+            android:textSize="12sp"
+            android:id="@+id/articleAuthor"
+            android:textColor="#4c4c4c"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:textSize="12sp"
+            android:id="@+id/articleDate"
+            android:textColor="#4c4c4c"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
