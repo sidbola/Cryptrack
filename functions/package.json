@@ -1,0 +1,21 @@
+{
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "firebase-admin": "^5.12.1",
+    "firebase-functions": "^1.0.4",
+    "firebase-tools": "^3.17.2",
+    "hoek": "^4.2.1",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "private": true
+}
